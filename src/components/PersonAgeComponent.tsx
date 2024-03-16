@@ -66,7 +66,7 @@ const PersonAgeComponent: React.FC = () => {
         <Div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register('name')} placeholder="Введите ваше имя" />
-                {errors.name && <Text>{errors.name.message}</Text>}
+                {errors.name && <Text style={{marginBottom: 15}}>{errors.name.message}</Text>}
                 <Button size="l" style={{ marginBottom: 15 }} type="submit">Узнать возраст</Button>
             </form>
             {loading && <Text>Загрузка...</Text>}
